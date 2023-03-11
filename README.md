@@ -5,9 +5,9 @@ Extract Table data from SQL Script files into .csv or .ods files
 
 ## Usage
 1. Clone the Repo
-'''bash
+```bash
 git clone 
-'''
+```
 2. Now put a subdir with all SQL Script files into sqldir/
 3. Start the runner.sh
 
