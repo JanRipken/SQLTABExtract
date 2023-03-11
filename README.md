@@ -1,19 +1,24 @@
 # SQLTabExtract
 
 ## CLI Tool
-Extract Table data from SQL Script files into .csv or .ods files
+
+SQLTabExtract is a command-line interface (CLI) tool that extracts table data from SQL script files into .csv or .ods files.
 
 ## Usage
-1. Clone the Repo
-```bash
-git clone https://github.com/JanRipken/SQLTabExtract.git
+
+1. To get started, clone the repository by running the following command:
+
 ```
-2. Now put a subdir with all SQL Script files into sqldir/
-3. Start the runner.sh
+git clone <https://github.com/JanRipken/SQLTabExtract.git>
+```
+
+2. Next, put a subdirectory with all SQL script files into the `sqldir/` directory.
+3. Start the `runner.sh` script.
 
 ### CSV
-for every SQL script file in sqldir/subdir/ a .csv file of the same name is generated in csvs
+
+For each SQL script file in the `sqldir/subdir/` directory, a corresponding .csv file is generated in the `csvs` directory.
 
 ### ODS
-For every subdir in sqldir a .ods will be generated in ods_files.
-For every file inside said subdir a sheet with the same name will be generated.
+
+For each subdirectory in `sqldir/`, an .ods file is generated in the `ods_files` directory. For each file inside said subdirectory, a sheet with the same name is generated.
