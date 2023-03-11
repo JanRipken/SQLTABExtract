@@ -6,14 +6,13 @@ SQLTabExtract is a command-line interface (CLI) tool that extracts table data fr
 
 ## Usage
 
-1. To get started, clone the repository by running the following command:
+- To get started, clone the repository by running the following command:
 
 ```
 git clone <https://github.com/JanRipken/SQLTabExtract.git>
 ```
-
-2. Next, put a subdirectory with all SQL script files into the `sqldir/` directory.
-3. Start the `runner.sh` script.
+- Next, put a subdirectory with all SQL script files into the `sqldir/` directory.
+- Start the `runner.sh` script.
 
 ### CSV
 
