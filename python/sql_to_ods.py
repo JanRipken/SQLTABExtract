@@ -1,6 +1,13 @@
 import os
 import pyexcel_ods3
 
+
+print("Please write out the line after which the table beginns")
+table_beginn = input()
+
+print("Please write out the line at which the table ends")
+table_end = input()
+
 # Ordner mit SQL-Dateien und Ordner für ODS-Dateien definieren
 sql_dir = 'sqldir/'
 ods_dir = 'ods_files/'
@@ -26,10 +33,10 @@ for subdir in subdirs:
 
         with open(sql_file_name, 'r') as sqlfile:
             for line in sqlfile:
-                if 'CREATE TABLE' in line:
+                if table_beginn in line:
                     break
             for line in sqlfile:
-                if 'ON [PRIMARY]' in line:
+                if table_end in line:
                     break
                 column_name = line.split('[')[1].split(']')[0]
                 data_type = line.split('[')[2].split(']')[0]

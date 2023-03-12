@@ -1,6 +1,13 @@
 import os
 import csv
 
+print("Please write out the line after which the table beginns")
+table_beginn = input()
+
+
+print("Please write out the line at which the table ends")
+table_end = input()
+
 # Pfad zum Hauptordner
 file_dir = 'sqldir/'
 
@@ -27,11 +34,11 @@ for subdir, dirs, files in os.walk(file_dir):
                 with open(sql_file_path, 'r') as sqlfile:
                     create_table = False
                     for line in sqlfile:
-                        if 'CREATE TABLE' in line:
+                        if table_beginn in line:
                             create_table = True
                             continue
                         if create_table:
-                            if 'ON [PRIMARY]' in line:
+                            if table_end in line:
                                 create_table = False
                                 break
                             column_name = line.split('[')[1].split(']')[0]
